@@ -17,12 +17,10 @@ class ShotChart extends React.Component {
 
 
    componentDidMount() {
-     console.log("playerId in ShotChart: " + this.props.playerId);
+     // console.log("playerId in ShotChart: " + this.props.playerId);
      nba.stats.shots({
        PlayerID: this.props.playerId
    }).then((response) => {
-     console.log('response in ShotChart: ');
-     console.log(response);
        const final_shots = response.shot_Chart_Detail.map(shot => ({
            x: (shot.locX + 250) / 10,
            y: (shot.locY + 50) / 10,
