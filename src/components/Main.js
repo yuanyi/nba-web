@@ -8,7 +8,8 @@ console.log(nba);
 
 class Main extends Component {
   state = {
-       playerInfo: {}
+       playerInfo: {},
+       playerId: 201939
    }
 
    componentDidMount() {
@@ -27,7 +28,7 @@ class Main extends Component {
        return (
            <div className="main">
               <Profile playerInfo={this.state.playerInfo}/>
-              <ShotChart />
+              <ShotChart playerId={this.state.playerId}/>
            </div>
        );
    }
