@@ -9,6 +9,10 @@ class DataViewContainer extends Component {
 
   onCountSliderChange = (data) => {
     console.log(data);
+    this.setState({
+        minCount: data
+      }
+    )
   }
 
    render() {
