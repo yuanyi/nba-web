@@ -24,7 +24,9 @@ class DataViewContainer extends Component {
                />
 
                <div className="filters">
-                  <CountSlider onCountSliderChange={_.debounce(this.onCountSliderChange, 500)}/>
+                  <CountSlider
+                    value = {this.state.minCount}
+                    onCountSliderChange={_.debounce(this.onCountSliderChange, 500)}/>
                </div>
            </div>
        );
