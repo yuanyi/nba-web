@@ -1,7 +1,6 @@
 import React, { Component, useState } from 'react';
 import { Input, AutoComplete } from 'antd';
 import { SelectProps } from 'antd/es/select';
-// import { Icon, Button, Input, AutoComplete } from 'antd';
 
 
 class SearchBar extends Component {
