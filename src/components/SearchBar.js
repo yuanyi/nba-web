@@ -5,12 +5,12 @@ import { SelectProps } from 'antd/es/select';
 
 class SearchBar extends Component {
 
-function getRandomInt(max, min = 0) {
+	getRandomInt = (max, min = 0) => {
   return Math.floor(Math.random() * (max - min + 1)) + min; // eslint-disable-line no-mixed-operators
 }
 
-const searchResult = query =>
-  new Array(getRandomInt(5))
+ searchResult = query =>
+  new Array(this.getRandomInt(5))
     .join('.')
     .split('.')
     .map((item, idx) => {
@@ -34,7 +34,7 @@ const searchResult = query =>
                 {category}
               </a>
             </span>
-            <span>{getRandomInt(200, 100)} results</span>
+            <span>{this.getRandomInt(200, 100)} results</span>
           </div>
         ),
       };
